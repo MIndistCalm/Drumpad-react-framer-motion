@@ -1,42 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { motion } from 'framer-motion'
+import { MCard } from './components';
 
 function App() {
 
-  const imageVariants = {
+  const animateVariants = {
     hidden: {
-      x: -100,
-      opacity: 0
+      opacity: 0,
+      y: -1500,
     },
     visible: (custom: number) => ({
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
-        delay: custom * 0.4
+        delay: custom * 0.02,
+        type: 'spring',
       }
     })
   }
 
-  return (
-    <motion.div initial='hidden' animate='visible' className="App">
-      <header className="App-header">
-        
+  const cardCount = 64;
+  const cardIndexes = Array.from({ length: cardCount }, (_, index) => index);
 
-        <motion.img custom={1} variants={imageVariants} src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return (
+    <motion.div initial='hidden' animate='visible' className='bg-background flex flex-col items-center justify-center min-h-[100vh]'>
+      <div className='w-[456px] h-[456px] flex gap-2 flex-wrap justify-start'>
+        {cardIndexes.map((index) => (
+          <MCard key={index} custom={index} variants={animateVariants} />
+        ))}
+      </div>
     </motion.div>
   );
 }
