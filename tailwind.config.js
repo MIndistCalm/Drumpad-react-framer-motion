@@ -89,6 +89,7 @@ module.exports = {
       action: '#1b7fb7', // primary-80
       success: '#4BB34B', // success-50
       error: '#F04F4F', // error-50
+      white: '#FFFFFF', // error-50
       background: '#282c34' //
     },
     fontFamily: {

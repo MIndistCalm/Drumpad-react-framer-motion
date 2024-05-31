@@ -1,5 +1,5 @@
 {
-  "name": "framer-motion-app",
+  "name": "http://MIndistCalm.github.io/Drumpad-react-framer-motion/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +11,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "framer-motion": "^10.15.0",
+    "prettier": "^3.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
