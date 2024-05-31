@@ -49,7 +49,8 @@ export const Card: FC<CardProps> = ({
 
   const handlePlayDrum = (sound: string): void => {
     const audio = new Audio(sound)
-    isFindedBit && audio.play()
+    // isFindedBit && audio.play()
+    isFindedBit && console.log(audio)
   }
 
   useEffect(() => {
