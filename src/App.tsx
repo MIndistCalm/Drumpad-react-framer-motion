@@ -32,10 +32,10 @@ export const drumTypes = [
     type: 'TapTap',
     sound: './sounds/TapTap.ogg',
   },
-  // {
-  //   type: 'UraYeah',
-  //   sound: './sounds/UraYeah.ogg',
-  // },
+  {
+    type: 'UraYeah',
+    sound: './sounds/UraYeah.ogg',
+  },
   {
     type: 'higher',
     sound: './sounds/higher.ogg',
