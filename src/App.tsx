@@ -8,10 +8,10 @@ export const drumTypes = [
     type: 'Kick',
     sound: './sounds/kick.mp3',
   },
-  {
-    type: 'single',
-    sound: './sounds/single.mp3',
-  },
+  // {
+  //   type: 'single',
+  //   sound: './sounds/single.mp3',
+  // },
   {
     type: 'Snare',
     sound: './sounds/snare.mp3',
@@ -24,9 +24,29 @@ export const drumTypes = [
     type: 'Tom',
     sound: './sounds/tom.mp3',
   },
+  // {
+  //   type: 'CowBell',
+  //   sound: './sounds/cowbell.mp3',
+  // },
   {
-    type: 'CowBell',
-    sound: './sounds/cowbell.mp3',
+    type: 'TapTap',
+    sound: './sounds/TapTap.ogg',
+  },
+  // {
+  //   type: 'UraYeah',
+  //   sound: './sounds/UraYeah.ogg',
+  // },
+  {
+    type: 'higher',
+    sound: './sounds/higher.ogg',
+  },
+  {
+    type: 'lower',
+    sound: './sounds/lower.ogg',
+  },
+  {
+    type: 'br',
+    sound: './sounds/br.ogg',
   },
   // Это на новый год
   // {
@@ -108,15 +128,15 @@ function App() {
         {[...Array(rowsCount)].map((_, rowIndex) => {
           const titleBit = drumTypes[rowIndex]
           return (
-            <div className='flex gap-2'>
+            <div key={rowIndex} className='flex gap-2'>
               <div className='h-[50px] w-[100px] flex justify-center items-center font-bold text-xxl text-action'>
                 {titleBit.type}
               </div>
-              <div key={rowIndex} className='flex gap-2 justify-start my-1'>
+              <div className='flex gap-2 justify-start my-1'>
                 {cardIndexes.map((index) => {
                   return (
                     <motion.div
-                      key={index}
+                      key={`${index}sds`}
                       className={`mcard-wrapper ${currentIndex % cardsPerRow === index ? 'active' : ''} ${index % 4 === 3 ? 'mr-3' : 'mr-0'}`}
                     >
                       <MCard
